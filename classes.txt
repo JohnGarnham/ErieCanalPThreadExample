@@ -1,0 +1,29 @@
+John Garnham
+
+
+Classes:
+
+Car: Represents individual cars. Variables associated with each car
+include a license plate number, the number of trips left that the car
+wishes to take, the direction that the car is currently in, and a
+thread handling the actual driving of the car. To make the car start
+its trip, the start method is called. The start method is called with
+a reference to the Erie Canal Monitor. The start method then creates a
+new thread of the "drive" method, passing to it the Erie Canal Monitor
+reference that was passed to it.
+
+
+Erie Control Monitor: Controls traffic on the bridge. Variables
+associated with the bridge include the number of cars currently on the
+bridge, and a mutex that controls access to the bridge itself. The
+monitor ensures that no collisions will occur between north-bound and
+south-bound traffic, and will ensure that only three cars are on the
+bridge at a time.
+
+
+simulation.cpp - The actual executable code of the bridge
+simulation. The simulation creates a user-specified number of cars
+each taking a user-specified number of trips. It then starts each
+car. It is then the responsibility of the car driver to properly use
+the Erie Control monitor, to ensure that no crashes occur and that the
+bridge always has three or less cars on it at a time.
